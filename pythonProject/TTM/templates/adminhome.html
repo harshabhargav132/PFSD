@@ -1,0 +1,40 @@
+{% extends 'index.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>admin</title>
+</head>
+<body>
+<div>
+    {% block b1 %}
+<h1 align="center"> <font color="green"> Admin klu travels </font> </h1>
+<form method="post" action="{% url 'checkpackage' %}">
+    {% csrf_token %}
+    <table align="center" border="2">
+        <tr>
+            <td>Enter Tour Code </td>
+             <td><input type="text" name="tourcode"> </td>
+        </tr>
+ <tr>
+            <td>Enter Tour Name </td>
+             <td><input type="text" name="tourname"> </td>
+        </tr>
+         <tr>
+            <td>Enter Tour Package </td>
+             <td><input type="text" name="tourpackage"> </td>
+        </tr>
+         <tr>
+            <td>Enter Description </td>
+             <td><input type="text" name="tourdesc"> </td>
+        </tr>
+         <tr>
+            <td>Enter Insert </td>
+             <td><input type="text" name="tourname"> </td>
+        </tr>
+
+    </table>
+</form>
+</div>
+</body>
+{ % endblock %}
+</html>

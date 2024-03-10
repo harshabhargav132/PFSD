@@ -1,0 +1,32 @@
+{% extends 'index.html'%}
+
+{% block b1 %}
+
+<br>
+<h3>Add Package</h3>
+    <form method="post" action="{% url 'checkpackage' %}">
+        {% csrf_token %}
+        <table align="center" width="20%" height="40" border="">
+            <tr>
+                <td><label>Tourcode</label></td>
+                <td> <input type="text"  name="tourcode" required></td>
+            </tr>
+            <tr>
+                <td><label>Tourname</label></td>
+                <td><input type="text" name="tourname" required></td>
+            </tr>
+            <tr>
+                <td><label>Tourpackage</label></td>
+                <td><input type="text" name="tourpackage" required></td>
+            </tr>
+            <tr>
+                <td><label>Description</label></td>
+                <td><input type="text" name="desc" required></td>
+            </tr>
+            <tr align="center ">
+                <td><input type="submit" value="Add"></td>
+                <td><input type="reset" value="Clear"></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% load static %}
+{% block b1 %}
+<h2 align="center"><font color="blue">Welcome to Student Dashboard</font></h2>
+<a href="logout">Logout</a>
+<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+<h3>Student Details:</h3>
+<p>Name: harsha</p>
+<p>Roll Number: 12345</p>
+<p>Email: john.doe@example.com</p>
+<p>Program: B.Tech</p>
+
+<h3>Student Class:</h3>
+<p>Grade: 10</p>
+<p>Section: A</p>
+
+<h3>Results (in GPA):</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Subject</th>
+            <th>GPA</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mathematics</td>
+            <td>9.7</td>
+        </tr>
+        <tr>
+            <td>Physics</td>
+            <td>8.5</td>
+        </tr>
+        <tr>
+            <td>Chemistry</td>
+            <td>8.9</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

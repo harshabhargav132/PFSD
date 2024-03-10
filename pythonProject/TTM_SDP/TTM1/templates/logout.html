@@ -1,0 +1,11 @@
+<!-- logout.html  -->
+{% extends 'index.html' %}
+
+{% block b1 %}
+
+<h3>This is LOGOUT PAGE</h3>
+<form method="post" action="{% url 'logoutthepage' %}">
+            {% csrf_token %}
+            <input type="submit" value="Log Out">
+        </form>
+{% endblock %}

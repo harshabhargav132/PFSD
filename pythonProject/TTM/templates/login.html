@@ -1,0 +1,27 @@
+<!-- login.html -->
+{% extends 'index.html' %}
+
+{% block b1 %}
+
+<h3>This is login page</h3>
+<br>
+
+<form method="post" action="{% url 'checkadminlogin' %}" >
+    {% csrf_token %}
+    <table align="center" border="2">
+        <tr>
+            <td>Enter Username</td>
+            <td><input type="text" name="uname" placeholder="Enter Username" required></td>
+        </tr>
+        <tr>
+            <td>Enter Password</td>
+            <td><input type="password" name="pwd" placeholder="Enter Password" required></td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="login" value="Login"></td>
+            <td><input type="reset" name="reset" value="Reset"></td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}

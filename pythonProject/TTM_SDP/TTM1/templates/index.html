@@ -1,0 +1,35 @@
+<!-- imdex.html -->
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tourism Travel Management</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+</head>
+
+<body>
+<div class="navbar-container">
+    <nav class="navbar">
+        <a href="{% url 'homePage' %}"> Home </a>
+        <a href="{% url 'loginPage' %}"> Login </a>
+        <a href="{% url 'contactPage' %}"> Contact Us </a>
+        <a href="{% url 'aboutPage' %}"> About Us </a>
+        <a href="{% url 'signupPage' %}"> Signup </a>
+        <a href="{% url 'changepassword' %}"> Change Password </a>
+
+    </nav>
+</div>
+<hr>
+<h2 align="center">KLU Tourism</h2>
+
+    {% block b1 %}
+
+    <h3>This is home page</h3>
+
+    {% endblock %}
+</body>
+
+</html>

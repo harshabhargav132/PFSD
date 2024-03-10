@@ -1,0 +1,50 @@
+<!-- viewplaces.html -->
+{% extends 'index.html' %}
+
+{% block b1 %}
+
+<h3>Packeges Offered</h3>
+<br>
+<style>
+    table {
+            margin: 0 auto; /* Center-align the table */
+            border-collapse: collapse;
+            width: 80%; /* Set the width of the table */
+            background-color: #00ff00; /* Set the background color to green */
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #dddddd;
+        }
+
+        th {
+            background-color: #4CAF50; /* Set a darker green color for the header */
+            color: white;
+        }
+</style>
+
+<table border="1" >
+        <thead>
+            <tr>
+                <th>Tourcode</th>
+                <th>Tourname</th>
+                <th>Tourpackage</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in placesdata %}
+                <tr>
+                    <td>{{ data.tourcode }}</td>
+                    <td>{{ data.tourname }}</td>
+                    <td>{{ data.tourpackage }}</td>
+                    <td>{{ data.desc }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

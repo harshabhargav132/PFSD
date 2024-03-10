@@ -1,0 +1,35 @@
+.signup-form {
+    width: 50%;
+    margin: auto;
+}
+
+.signup-form table {
+    width: 100%;
+}
+
+.signup-form td {
+    padding: 10px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.signup-form input[type="submit"],
+.signup-form input[type="reset"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.signup-form input[type="submit"]:hover,
+.signup-form input[type="reset"]:hover {
+    background-color: #45a049;
+}

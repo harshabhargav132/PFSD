@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+
+{% load static %}
+{% block b1 %}
+
+<h3>This is signup page</h3>
+<br>
+
+<form method="post" action="{% url 'checkRegister' %}" class="signup-form">
+    {% csrf_token %}
+    <table align="center" border="2">
+        <tr>
+            <td>Enter Name</td>
+            <td><input type="text" name="name" placeholder="Enter Name" required></td>
+        </tr>
+        <tr>
+            <td>Enter Address</td>
+            <td><input type="text" name="addr" placeholder="Enter Address" required></td>
+        </tr>
+        <tr>
+            <td>Enter Email</td>
+            <td><input type="email" name="email" placeholder="Enter Email" required></td>
+        </tr>
+        <tr>
+            <td>Enter Phone Number</td>
+            <td><input type="text" name="phno" placeholder="Enter Phone Number" required></td>
+        </tr>
+        <tr>
+            <td>Enter Username</td>
+            <td><input type="text" name="uname" placeholder="Enter Username" required></td>
+        </tr>
+        <tr>
+            <td>Enter Password</td>
+            <td><input type="password" name="pwd" placeholder="Enter Password" required></td>
+        </tr>
+        <tr>
+            <td>Re-Enter Password</td>
+            <td><input type="password" name="cpwd" placeholder="Re-Enter Password" required></td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="signup" value="SignUp"></td>
+            <td><input type="reset" name="reset" value="Reset"></td>
+        </tr>
+    </table>
+</form>
+<link type="text/css" rel="stylesheet" href="{% static 'css/signup.css' %}" />
+{% endblock %}
